@@ -1,0 +1,20 @@
+{
+  "name": "nyt-database",
+  "version": "1.0.0",
+  "description": "Grabs articles from the New York Times and save them or delete them from your saved",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciarram/NYT-Database.git"
+  },
+  "author": "Ciarra Murphy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ciarram/NYT-Database/issues"
+  },
+  "homepage": "https://github.com/ciarram/NYT-Database#readme"
+}
