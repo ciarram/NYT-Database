@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
-import DeleteBtn from "../../components/DeleteBtn";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input, TextArea, SearchBtn } from "../../components/Form";
 import API from "../../utils/API";
 
 class Articles extends Component {
@@ -18,8 +17,8 @@ class Articles extends Component {
   }
 
   getTheArticles = query => {
-    API.getBooks(query)
-      .then(res => this.setState({ books: res.data}))
+    API.getArticles(query)
+      .then(res => this.setState({ articles: res.data}))
       .catch(err => console.log(err));
   };
 
@@ -43,13 +42,13 @@ class Articles extends Component {
         <Row>
           <Col size="md-12">
             <Jumbotron>
-              <h1>What Books Should I Read?</h1>
+              <h1></h1>
             </Jumbotron>
             <form>
               <Input name="title" placeholder="Title (required)" />
               <Input name="author" placeholder="Author (required)" />
               <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
-              <FormBtn>Submit Book</FormBtn>
+              <SearchBtn>Search</SearchBtn>
             </form>
           </Col>
           <Col size="md-12">
@@ -65,7 +64,7 @@ class Articles extends Component {
                         {book.title} by {book.author}
                       </strong>
                     </a>
-                    <DeleteBtn />
+
                   </ListItem>
                 ))}
               </List>
