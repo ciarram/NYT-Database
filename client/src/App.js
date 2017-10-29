@@ -1,5 +1,5 @@
 import React from "react";
-import Books from "./pages/Articles";
+import Articles from "./pages/Articles";
 import Nav from "./components/Nav";
 
 const App = () => 

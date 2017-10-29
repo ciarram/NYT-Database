@@ -41,7 +41,7 @@ class Articles extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          <Col size="md-12">
             <Jumbotron>
               <h1>What Books Should I Read?</h1>
             </Jumbotron>
@@ -52,7 +52,7 @@ class Articles extends Component {
               <FormBtn>Submit Book</FormBtn>
             </form>
           </Col>
-          <Col size="md-6">
+          <Col size="md-12">
             <Jumbotron>
               <h1>Books On My List</h1>
             </Jumbotron>
@@ -79,4 +79,4 @@ class Articles extends Component {
   }
 }
 
-export default Books;
+export default Articles;
