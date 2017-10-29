@@ -5,23 +5,23 @@ mongoose.Promise = global.Promise;
 // This file empties the Books collection and inserts the books below
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist",
+  process.env.MONGODB_URI || "mongodb://localhost/nytreact",
   {
     useMongoClient: true
   }
 );
 
-const bookSeed = [
+const articlesSeed = [
   {
-      title: "",
-      url: "",
-      summary: ""
+    title: "",
+    url: "",
+    date: ""
   }
 ];
 
 db.Article
   .remove({})
-  .then(() => db.Book.collection.insertMany(bookSeed))
+  .then(() => db.Article.collection.insertMany(articleSeed))
   .then(data => {
     console.log(data.insertedIds.length + " records inserted!");
     process.exit(0);
