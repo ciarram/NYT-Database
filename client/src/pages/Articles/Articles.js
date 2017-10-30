@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
 import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
 import { Input, TextArea, SearchBtn } from "../../components/Form";
 import API from "../../utils/API";
 
@@ -42,21 +41,25 @@ class Articles extends Component {
         <Row>
           <Col size="md-12">
             <Jumbotron>
-              <h1></h1>
+              <h1>Search</h1>
             </Jumbotron>
             <form>
-              <Input name="title" placeholder="Title (required)" />
-              <Input name="author" placeholder="Author (required)" />
-              <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
+              <Input name="title" placeholder="Enter your search term" />
+              <br></br>
+              <Input name="start-date" placeholder="Start Date(Optional)" />
+              <br></br>
+              <TextArea name="end-date" placeholder="End Date (Optional)" />
               <SearchBtn>Search</SearchBtn>
             </form>
           </Col>
+          </Row>
+          <Row>
           <Col size="md-12">
             <Jumbotron>
-              <h1>Books On My List</h1>
+              <h1>Results</h1>
             </Jumbotron>
-            {this.state.books.length ? (
-              <List>
+            {/* {this.state.books.length ? (
+              {/* <List>
                 {this.state.books.map(book => (
                   <ListItem key={book._id}>
                     <a href={"/books/" + book._id}>
@@ -67,12 +70,9 @@ class Articles extends Component {
 
                   </ListItem>
                 ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
+              </List> */}
           </Col>
-        </Row>
+          </Row>
       </Container>
     );
   }
